@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+    <form>
+        <div class="mb-3">
+            <h2>{{ symbol.name }}</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Symbol</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ symbol.name }}</td>
+                        <td>{{ symbol.price | usd }}</td>
+                        <td>{{ symbol.symbol }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </form>
+{% endblock %}
